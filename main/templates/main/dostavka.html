@@ -12,7 +12,7 @@
       itemprop="itemListElement"
       itemscope=""
       itemtype="http://schema.org/ListItem"
-      ><a class="breadcrumbs" itemprop="item" href="/"
+      ><a class="breadcrumbs" itemprop="item" href="{% url "main:home" %}"
         ><span itemprop="name">Главная</span></a
       ><meta itemprop="position" content="1" /></span
     ><span class="breadcrumbs_sep"></span
@@ -20,7 +20,7 @@
       itemprop="itemListElement"
       itemscope=""
       itemtype="http://schema.org/ListItem"
-      ><a class="breadcrumbs" itemprop="item" href="/dostavka"
+      ><a class="breadcrumbs" itemprop="item" href="{% url "main:dostavka" %}"
         ><span itemprop="name">Доставка</span></a
       ><meta itemprop="position" content="2"
     /></span>
