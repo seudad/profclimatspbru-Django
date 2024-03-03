@@ -1,0 +1,119 @@
+<div id="header">
+  <!--div id="header-title" style="background-color:#4c9ed9;"-->
+  <div id="header-title">
+    <a href="/" title="На главную">
+      <div id="header-title-logo" style="width: 180pt; height: 64pt">
+        <!-- img src="/images/ps2.png" alt="ПрофКлимат СПб" style="position: absolute; top:-4pt;left:0pt;height:85pt;opacity: 0.7;font-weight: 800;"-->
+        <div
+          style="
+            position: absolute;
+            font-size: 54pt;
+            color: #f08080;
+            top: -8pt;
+            left: 12pt;
+          "
+          class="typcn typcn-weather-sunny"
+        ></div>
+        <div
+          style="
+            position: absolute;
+            font-size: 54pt;
+            color: #87cefa;
+            top: 8pt;
+            left: -9pt;
+          "
+          class="typcn typcn-weather-snow"
+        ></div>
+        <div
+          style="
+            position: absolute;
+            font-size: 18pt;
+            color: #4c9ed9;
+            top: 8pt;
+            left: 64pt;
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+            text-align: right;
+          "
+        >
+          ПрофКлимат<br />СПб
+        </div>
+      </div>
+    </a>
+    <div id="header-title-title"><!--TMPL_VAR NAME="header-title-title"--></div>
+    <div class="clr"></div>
+  </div>
+  <div id="header-action">
+    <!--TMPL_INCLUDE NAME="action-min.html"-->
+  </div>
+  <div
+    id="view-mode"
+    data-mode="mobile"
+    title="Переключиться к мобильному виду"
+  ></div>
+  <div id="header-contacts">
+    <div>
+      <div id="header-contacts-phones">
+        <!--TMPL_LOOP NAME="contacts-phones"-->
+        <a href="tel:<!--TMPL_VAR NAME='tel'-->" rel="nofollow"
+          ><!--TMPL_VAR NAME='no'--></a
+        >
+        <!--/TMPL_LOOP-->
+      </div>
+      <div id="header-contacts-calls">
+        <!--TMPL_IF NAME='viber'-->
+        <a
+          id="viber"
+          href="viber://chat?number=<!--TMPL_VAR NAME='viber'-->"
+          rel="nofollow"
+          title="Viber"
+        ></a>
+        <!--/TMPL_IF-->
+        <!--TMPL_IF NAME='whatsapp'-->
+        <a
+          id="whatsapp"
+          href="whatsapp://send?phone=<!--TMPL_VAR NAME='whatsapp'-->"
+          rel="nofollow"
+          title="Whatsapp"
+        ></a>
+        <!--/TMPL_IF-->
+      </div>
+    </div>
+    <a id="callback" href="/callback">Заказать обратный звонок</a>
+  </div>
+  <div id="header-schedule">
+    <!--TMPL_LOOP NAME="contacts-schedule"-->
+    <!--TMPL_IF NAME="to"-->
+    <!--TMPL_IF NAME="end"-->
+    <div style="margin-top: 0.3em">
+      <!--TMPL_VAR NAME="from"-->-<!--TMPL_VAR NAME="to"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->-<!--TMPL_VAR NAME="end"-->
+    </div>
+    <!--TMPL_ELSE-->
+    <div style="margin-top: 0.3em">
+      <!--TMPL_VAR NAME="from"-->-<!--TMPL_VAR NAME="to"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->
+    </div>
+    <!--/TMPL_IF-->
+    <!--TMPL_ELSE-->
+    <!--TMPL_IF NAME="end"-->
+    <div style="margin-top: 0.3em">
+      <!--TMPL_VAR NAME="from"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->-<!--TMPL_VAR NAME="end"-->
+    </div>
+    <!--TMPL_ELSE-->
+    <div style="margin-top: 0.3em">
+      <!--TMPL_VAR NAME="from"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->
+    </div>
+    <!--/TMPL_IF-->
+    <!--/TMPL_IF-->
+    <!--/TMPL_LOOP-->
+  </div>
+  <div id="find">
+    <input
+      id="find-text"
+      type="text"
+      maxlength="128"
+      placeholder="Поиск по сайту"
+    />
+    <div id="find-go"></div>
+  </div>
+  <div id="header-status"></div>
+  <div class="clr"></div>
+</div>

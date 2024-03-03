@@ -8,12 +8,14 @@
     <!--TMPL_VAR NAME="META"-->
     <!--TMPL_VAR NAME="canonical"-->
     <!--TMPL_INCLUDE NAME="favicon.html"-->
+    {% include "main/favicon.html" %}
     <link rel="stylesheet" href="{% static 'css/main.5.css' %}" />
     <link rel="stylesheet" href="{% static 'css/typicons209.min.css' %}" />
-	<link rel="stylesheet" href="{% static 'css/index.1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.1.css' %}" />
     <link rel="stylesheet" href="{% static 'css/index.2.css' %}" />
-    
+
     <!--TMPL_INCLUDE NAME="inc/main.css.html"-->
+    {% include "main/main.css.html" %}
     <link rel="stylesheet" href="/js/libs/carousel/css/carousel.3.css" />
     <link rel="stylesheet" href="{% static 'css/index.3.css' %}" />
   </head>
@@ -21,6 +23,7 @@
     <!--TMPL_INCLUDE NAME="../analytics.html"-->
     <header>
       <!--TMPL_INCLUDE NAME="header.html"-->
+      {% include "main/header.html" %}
       <!--TMPL_INCLUDE NAME="navbar.html"-->
     </header>
     <div id="main" class="workarea">
@@ -176,46 +179,38 @@
         </h2>
         <div id="main-cbtypes" class="main-refs">
           <a href="/kondicionery/mobilnyj">
-            <img
-              src="{% static "/images/units/00001450611090698952-128x.png"%}"
-              alt="Мобильные"
-            />
+            <img src="{% static "/images/units/00001450611090698952-128x.png"%}"
+            alt="Мобильные" />
             <div>Мобильные</div>
           </a>
           <a href="/kondicionery/nastennyj">
-            <img
-              src="{% static "/images/units/00001448979651455868t-128x.png"%}"
-              alt="Настенные"
-            />
+            <img src="{% static
+            "/images/units/00001448979651455868t-128x.png"%}" alt="Настенные" />
             <div>Настенные</div>
           </a>
           <a href="/kondicionery/napolnyj">
-            <img src="{% static "/images/napolnyi-128x.png"%}" alt="Напольные" />
+            <img src="{% static "/images/napolnyi-128x.png"%}" alt="Напольные"
+            />
             <div>Напольные</div>
           </a>
           <a href="/kondicionery/napolno-potolochnyj">
-            <img
-              src="{% static "/images/units/00001485726442240847-128x.jpg"%}"
-              alt="Напольно-потолочные"
-            />
+            <img src="{% static "/images/units/00001485726442240847-128x.jpg"%}"
+            alt="Напольно-потолочные" />
             <div>Напольно-потолочные</div>
           </a>
           <a href="/kondicionery/kolonnyj">
-            <img src="{% static "/images/kolonnye-split-sistemy-128x.png"%}" alt="Колонные" />
+            <img src="{% static "/images/kolonnye-split-sistemy-128x.png"%}"
+            alt="Колонные" />
             <div>Колонные</div>
           </a>
           <a href="/kondicionery/kanalnyj">
-            <img
-              src="{% static "/images/units/00001485795987264889-128x.jpg"%}"
-              alt="Канальные"
-            />
+            <img src="{% static "/images/units/00001485795987264889-128x.jpg"%}"
+            alt="Канальные" />
             <div>Канальные</div>
           </a>
           <a href="/kondicionery/kassetnyj">
-            <img
-              src="{% static "/images/units/00001485630432871992-128x.jpg"%}"
-              alt="Кассетные"
-            />
+            <img src="{% static "/images/units/00001485630432871992-128x.jpg"%}"
+            alt="Кассетные" />
             <div>Кассетные</div>
           </a>
           <a href="/kondicionery/okonnyj">
@@ -232,11 +227,13 @@
         </h2>
         <div id="main-cutypes" class="main-refs">
           <a href="/kondicionery/monoblok">
-            <img src="{% static "/images/monoblok-128x.png"%}" alt="Моноблочные" />
+            <img src="{% static "/images/monoblok-128x.png"%}" alt="Моноблочные"
+            />
             <div>Моноблочные</div>
           </a>
           <a href="/kondicionery/split-sistema">
-            <img src="{% static "/images/split-sistema-128x.png"%}" alt="Сплит-системы" />
+            <img src="{% static "/images/split-sistema-128x.png"%}"
+            alt="Сплит-системы" />
             <div>Сплит-системы</div>
           </a>
           <!-- a href="/kondicionery/multisplit-sistema">
@@ -244,10 +241,8 @@
                         <div>Мультисплит-системы</div>
                     </a -->
           <a href="/kondicionery/teplovye-nasosy">
-            <img
-              src="{% static "/images/split-sistema-hpump-128x.png"%}"
-              alt="Сплит-системы с тепловым насосом"
-            />
+            <img src="{% static "/images/split-sistema-hpump-128x.png"%}"
+            alt="Сплит-системы с тепловым насосом" />
             <div>С тепловым насосом</div>
           </a>
           <div class="clr"></div>
@@ -260,24 +255,18 @@
         </h2>
         <div id="main-hbtypes" class="main-refs">
           <a href="/obogrevateli/teploventilyator">
-            <img
-              src="{% static "/images/units/00001450536809686657-128x.gif"%}"
-              alt="Тепловентиляторы"
-            />
+            <img src="{% static "/images/units/00001450536809686657-128x.gif"%}"
+            alt="Тепловентиляторы" />
             <div>Тепловентиляторы</div>
           </a>
           <a href="/obogrevateli/konvektor">
-            <img
-              src="{% static "/images/units/00001450535901756709-128x.gif"%}"
-              alt="Конвекторы"
-            />
+            <img src="{% static "/images/units/00001450535901756709-128x.gif"%}"
+            alt="Конвекторы" />
             <div>Конвекторы</div>
           </a>
           <a href="/obogrevateli/gazovaya-teplovaya-pushka">
-            <img
-              src="{% static "/images/units/00001450535346985390-128x.gif"%}"
-              alt="Газовые тепловые пушки<"
-            />
+            <img src="{% static "/images/units/00001450535346985390-128x.gif"%}"
+            alt="Газовые тепловые пушки<" />
             <div>Газовые тепловые пушки</div>
           </a>
           <a href="/obogrevateli/dizelnaya-teplovaya-pushka">
@@ -288,24 +277,18 @@
             <div>Дизельные тепловые пушки</div>
           </a>
           <a href="/obogrevateli/maslyanyj-radiator">
-            <img
-              src="{% static "/images/units/00001450536165265731-128x.gif"%}"
-              alt="Маслянные радиаторы"
-            />
+            <img src="{% static "/images/units/00001450536165265731-128x.gif"%}"
+            alt="Маслянные радиаторы" />
             <div>Маслянные радиаторы</div>
           </a>
           <a href="/obogrevateli/elektricheskij-kamin">
-            <img
-              src="{% static "/images/elektricheskij-kamin2.png"%}"
-              alt="Электрические камины"
-            />
+            <img src="{% static "/images/elektricheskij-kamin2.png"%}"
+            alt="Электрические камины" />
             <div>Электрические камины</div>
           </a>
           <a href="/obogrevateli/elektricheskaya-teplovaya-pushka">
-            <img
-              src="{% static "/images/units/00001450536896763816-128x.gif"%}"
-              alt="Электрические тепловые пушки"
-            />
+            <img src="{% static "/images/units/00001450536896763816-128x.gif"%}"
+            alt="Электрические тепловые пушки" />
             <div>Электрические тепловые пушки</div>
           </a>
           <div class="clr"></div>
@@ -314,6 +297,7 @@
       <div class="clr"></div>
     </div>
     <!--TMPL_INCLUDE NAME="inc/main.footer.html"-->
+    {% include "main/main.footer.html" %}
     <!--TMPL_INCLUDE NAME="rtoolbar.html"-->
     <div id="check-tip"></div>
     <!--TMPL_INCLUDE NAME="cab.html"-->
