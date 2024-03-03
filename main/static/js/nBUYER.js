@@ -1,0 +1,1 @@
+var nBUYER={personal_area:{}};nBUYER.registration=function(){};nBUYER.entrance=function(){};nBUYER.personal_area.show=function(){};nBUYER.personal_area.hide=function(){};

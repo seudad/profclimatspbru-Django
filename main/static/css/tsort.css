@@ -1,0 +1,1 @@
+th.sortable{cursor:pointer}th.sortable:hover{background-color:#555;color:#eee}th.asc:after{content:"↓"}th.desc:after{content:"↑"}

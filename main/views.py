@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def index(request):
     data = {
-        'title' : 'Home',
+        'title' : 'Климатические системы и оборудования',
         'content' : 'Hello world!'
     }
 

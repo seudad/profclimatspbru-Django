@@ -1,0 +1,1 @@
+var nVUNITS={incl_manufacturers:null,_dummy_:null};nVUNITS.hide=function(){ $('#vunits').hide()};nVUNITS.show=function(){ $('#vunits').show()};nVUNITS.init=function(){};

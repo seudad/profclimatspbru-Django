@@ -1,0 +1,1 @@
+"use strict";var nCOMPARE={};nCOMPARE.init=function(){};

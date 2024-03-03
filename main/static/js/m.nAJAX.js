@@ -1,0 +1,1 @@
+var nAJAX={};nAJAX.ajax_error=function(xmlhttp,textStatus,errorThrown){console.log('ajax_error:',xmlhttp,textStatus,errorThrown);nAJAX.running_off();if(xmlhttp.status===404){}else{}};nAJAX.running_on=function(){var v_shadow=$('#_shadow');v_shadow.show()};nAJAX.running_off=function(){ $('#_shadow').hide()};

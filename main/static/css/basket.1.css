@@ -1,0 +1,80 @@
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#buyer-form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#buyer-name {
+    align-self: center;
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#buyer-phone {
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 150px;
+}
+
+#buyer-email {
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#buyer-time-from,#buyer-time-to {
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#buyer-rem {
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#buyer-polycy a {
+    text-decoration: none;
+}
+
+#buyer-polycy a:hover {
+    color: red;
+}
+
+#buyer-refresh, #buyer-submit, #buyer-clear {
+    position: relative;
+    cursor: pointer;
+    margin: 0.25em 0.2em;
+    padding: 0.4em;
+}
+
+#buyer-refresh {
+    color: #fff;
+    font-size: 110%;
+    background-color: #a5a5a5;
+    height: 32pt;
+}
+
+#buyer-refresh:before{
+    position: absolute;
+    font-family: 'typicons';
+    top: 2pt;
+    left: 6pt;
+    font-size: 160%;
+    content: "\e0da";
+}
+
+#buyer-refresh:after {
+    margin-left: 16pt;
+    margin-right: 2px;
+    content: "Обновить корзину";
+}

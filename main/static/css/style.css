@@ -1,0 +1,63 @@
+.info {
+	border: 1px solid #8cb1ff;
+	border-radius: 10px;
+	background: white;
+	text-align: center;
+	width: 90%;
+	max-width: 630px;
+	margin: 10% auto;
+	font-size: 18px;
+	font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+    }
+    
+    .s08266d634cbf5c1c595d10190ffb804e {
+      border: 2px solid transparent;
+      background: #8cb1ff;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 15px;
+      padding: 10px 10px;
+      text-decoration: none;
+      text-shadow: none;
+      border-radius: 10px;
+      box-shadow: none;
+      transition: 0.25s;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .s08266d634cbf5c1c595d10190ffb804e:hover {
+      background-color: #a5e4e6;
+    }
+    
+    .s347d8dfb24842225647575360c60fd45 {
+      cursor: pointer;
+      padding: 14px 14px;
+      text-decoration: none;
+      display: inline-block;
+      width: 14px;
+      height: 16px;
+    }
+    
+    .s347d8dfb24842225647575360c60fd45:hover {
+      border: 2px solid #ccc;
+      width: 10px;
+      height: 10px;
+    }
+    
+    .first {
+      width: 97%;
+      height: 97%;
+      display: table;
+      position: absolute;
+    background: rgba(255,255,255,0.7);
+    }
+    
+    .second {
+      display: table-cell;
+      vertical-align: middle;
+    }
+body{
+background-image:url("/tmpl/bot/profclimatspb.png");
+background-position:top center;
+}  

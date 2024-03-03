@@ -1,0 +1,94 @@
+div.main-recommended-arrow {
+  display: inline-block;
+  padding: 0;
+  font-size: 24pt;
+  color: #ddd;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+div.main-recommended-arrow:focus {
+  outline: none;
+}
+div.main-recommended-arrow:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+div.main-recommended-item {
+  width: 180pt;
+  padding: 4pt 6pt;
+  height: 130pt;
+  box-shadow: 1pt 1pt 1pt 1pt rgba(128, 128, 128, 0);
+}
+div.main-recommended-item a {
+  text-decoration: none;
+  color: #555;
+}
+div.main-recommended-item:hover {
+  box-shadow: 1pt 1pt 1pt 1pt rgba(128, 128, 128, 0.15);
+  border-color: #ccc;
+}
+div.main-recommended-item-info {
+  position: relative;
+  float: left;
+  display: block;
+  width: 160pt;
+  text-decoration: none;
+}
+div.main-recommended-item-text {
+  display: block;
+  font-size: 85%;
+  width: 160pt;
+  height: 48pt;
+  overflow-y: hidden;
+  text-decoration: none;
+  padding: 2pt;
+}
+div.main-recommended-item-price {
+  display: block;
+  font-size: 90%;
+  padding: 2pt;
+  width: 160pt;
+  height: 26pt;
+  overflow-y: hidden;
+  text-decoration: none;
+}
+div.main-recommended-item-image {
+  display: block;
+  width: 160pt;
+  height: 50pt;
+}
+div.main-recommended-item-image img {
+  position: absolute;
+  bottom: 3pt;
+  right: 1pt;
+  max-width: 128px;
+  max-height: 72px;
+}
+div.main-recommended-item-tags {
+  border: 1pt dotted pink;
+  float: right;
+  width: 18pt;
+}
+.old-price {
+  position: relative;
+  color: #7f94a1;
+  margin-bottom: 2pt;
+  display: inline-block;
+}
+.old-price:before {
+  border-bottom: 4px solid rgba(255, 0, 0, 0.5);
+  position: absolute;
+  content: "";
+  width: 98%;
+  height: 50%;
+  transform: rotate(-12deg);
+}
+.new-price {
+  display: inline-block;
+}
+.cur-price {
+}
+.discount {
+  display: inline-block;
+}

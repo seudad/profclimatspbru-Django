@@ -1,11 +1,349 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
     <title>{{ title }}</title>
-</head>
-<body>
-    <p>{{ content }}</p>
-</body>
+    <!--TMPL_INCLUDE NAME="meta.html"-->
+    <!--TMPL_VAR NAME="META"-->
+    <!--TMPL_VAR NAME="canonical"-->
+    <!--TMPL_INCLUDE NAME="favicon.html"-->
+    <link rel="stylesheet" href="{% static 'css/main.5.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/typicons209.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/index.1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.2.css' %}" />
+    
+    <!--TMPL_INCLUDE NAME="inc/main.css.html"-->
+    <link rel="stylesheet" href="/js/libs/carousel/css/carousel.3.css" />
+    <link rel="stylesheet" href="{% static 'css/index.3.css' %}" />
+  </head>
+  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+    <!--TMPL_INCLUDE NAME="../analytics.html"-->
+    <header>
+      <!--TMPL_INCLUDE NAME="header.html"-->
+      <!--TMPL_INCLUDE NAME="navbar.html"-->
+    </header>
+    <div id="main" class="workarea">
+      <h1 itemprop="headline"><!--TMPL_VAR NAME="H1"--></h1>
+      <div id="navbar-path" class="hide"><!--TMPL_VAR NAME="PATH"--></div>
+      <div id="_main-news">
+        <h2 class="mb">
+          <span class="typcn typcn-news" style="margin-right: 2pt"></span
+          >Новости
+          <a href="/news.rss"
+            ><span
+              class="typcn typcn-rss"
+              style="color: orange; margin-right: 2pt"
+            ></span
+          ></a>
+        </h2>
+        <div id="main-news">
+          <!--TMPL_VAR NAME="main-news"-->
+        </div>
+      </div>
+      <div class="clr"></div>
+      <!--TMPL_IF NAME="main-recommended"-->
+      <div style="margin-right: 12pt">
+        <div
+          id="main-recommended"
+          class="carousel"
+          style="
+            position: relative;
+            margin: 2pt 2pt 2pt 2pt;
+            height: 148pt;
+            width: 100%;
+          "
+        >
+          <div
+            id="main-recommended-arrow_left"
+            class="main-recommended-arrow"
+            style="position: absolute; top: 38pt; left: -4pt"
+          >
+            <span
+              class="typcn typcn-chevron-left-outline"
+              style="font-size: 42pt"
+            ></span>
+          </div>
+          <div
+            id="main-recommended-win"
+            style="
+              position: absolute;
+              top: 2pt;
+              left: 34pt;
+              width: 340pt;
+              overflow-x: hidden;
+            "
+          >
+            <div id="main-recommended-list" style="width: 99999px">
+              <!--TMPL_LOOP NAME="main-recommended"-->
+              <div class="carousel-item main-recommended-item">
+                <a href="<TMPL_VAR NAME=href>">
+                  <div class="main-recommended-item-info">
+                    <div class="main-recommended-item-text">
+                      <!--TMPL_VAR NAME="text"-->
+                      <div class="hide">
+                        <!--TMPL_VAR NAME="action"-->
+                        <!--TMPL_VAR NAME="new"-->
+                        <!--TMPL_VAR NAME="best"-->
+                      </div>
+                    </div>
+                    <div class="main-recommended-item-price">
+                      <!--TMPL_IF name="discount"-->
+                      <div class="old-price">
+                        <!--TMPL_VAR NAME="price_old"-->руб
+                      </div>
+                      <br />
+                      <div class="new-price">
+                        <!--TMPL_VAR NAME="price_new"-->руб
+                      </div>
+                      <div class="discount">
+                        (<!--TMPL_VAR NAME="discount"-->%)
+                      </div>
+                      <!--TMPL_ELSE-->
+                      <div class="cur-price">
+                        <!--TMPL_VAR NAME="price_old"-->руб
+                      </div>
+                      <!--/TMPL_IF-->
+                    </div>
+                    <div class="main-recommended-item-image">
+                      <img
+                        src="<TMPL_VAR NAME=image>"
+                        alt="<TMPL_VAR NAME=text>"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item-tags">
+                    <!--TMPL_IF name="action"-->
+                    <div class="tag-action" title="Акция!"></div>
+                    <!--/TMPL_IF-->
+                    <!--TMPL_IF name="new"-->
+                    <div class="tag-new" title="Новинка!"></div>
+                    <!--/TMPL_IF-->
+                    <!--TMPL_IF name="best"-->
+                    <div class="tag-best" title="Лучший выбор!"></div>
+                    <!--/TMPL_IF-->
+                  </div>
+                  <div class="clr"></div>
+                </a>
+              </div>
+              <!--/TMPL_LOOP-->
+            </div>
+          </div>
+          <div
+            id="main-recommended-arrow_right"
+            class="main-recommended-arrow"
+            style="position: absolute; top: 38pt; right: -6pt"
+          >
+            <span
+              class="typcn typcn-chevron-right-outline"
+              style="font-size: 42pt"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <!--/TMPL_IF-->
+      <div id="_main-manufacturer">
+        <h2 class="mb">
+          <span class="typcn typcn-th-list" style="margin-right: 2pt"></span>По
+          производителям:
+        </h2>
+        <div id="main-manufacturer">
+          <a id="main-manufacturer-cu" href="/kondicionery" class="mlinks"
+            >Кондиционеры:</a
+          >
+          <!--TMPL_LOOP NAME="main-cmanufacturers"-->
+          <!--TMPL_UNLESS name="nll"-->
+          <a href="<!--TMPL_VAR NAME='href'-->" class="mlinks cmans"
+            ><!--TMPL_VAR NAME='text'--></a
+          >
+          <!--/TMPL_UNLESS-->
+          <!--/TMPL_LOOP-->
+          <br />
+          <a id="main-manufacturer-hu" href="/obogrevateli" class="mlinks"
+            >Обогреватели:</a
+          >
+          <!--TMPL_LOOP NAME="main-hmanufacturers"-->
+          <a href="<!--TMPL_VAR NAME='href'-->" class="mlinks hmans"
+            ><!--TMPL_VAR NAME='text'--></a
+          >
+          <!--/TMPL_LOOP-->
+        </div>
+      </div>
+      <div id="_main-cbtypes" class="_main-refs">
+        <h2 class="mb">
+          <span class="typcn typcn-th-list" style="margin-right: 2pt"></span
+          >Кондиционеры по типу блока:
+        </h2>
+        <div id="main-cbtypes" class="main-refs">
+          <a href="/kondicionery/mobilnyj">
+            <img
+              src="{% static "/images/units/00001450611090698952-128x.png"%}"
+              alt="Мобильные"
+            />
+            <div>Мобильные</div>
+          </a>
+          <a href="/kondicionery/nastennyj">
+            <img
+              src="{% static "/images/units/00001448979651455868t-128x.png"%}"
+              alt="Настенные"
+            />
+            <div>Настенные</div>
+          </a>
+          <a href="/kondicionery/napolnyj">
+            <img src="{% static "/images/napolnyi-128x.png"%}" alt="Напольные" />
+            <div>Напольные</div>
+          </a>
+          <a href="/kondicionery/napolno-potolochnyj">
+            <img
+              src="{% static "/images/units/00001485726442240847-128x.jpg"%}"
+              alt="Напольно-потолочные"
+            />
+            <div>Напольно-потолочные</div>
+          </a>
+          <a href="/kondicionery/kolonnyj">
+            <img src="{% static "/images/kolonnye-split-sistemy-128x.png"%}" alt="Колонные" />
+            <div>Колонные</div>
+          </a>
+          <a href="/kondicionery/kanalnyj">
+            <img
+              src="{% static "/images/units/00001485795987264889-128x.jpg"%}"
+              alt="Канальные"
+            />
+            <div>Канальные</div>
+          </a>
+          <a href="/kondicionery/kassetnyj">
+            <img
+              src="{% static "/images/units/00001485630432871992-128x.jpg"%}"
+              alt="Кассетные"
+            />
+            <div>Кассетные</div>
+          </a>
+          <a href="/kondicionery/okonnyj">
+            <img src="{% static "/images/okonnyj-128x.png"%}" alt="Оконные" />
+            <div>Оконные</div>
+          </a>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div id="_main-cutypes" class="_main-refs">
+        <h2 class="mb">
+          <span class="typcn typcn-th-list" style="margin-right: 2pt"></span
+          >Кондиционеры по категориям:
+        </h2>
+        <div id="main-cutypes" class="main-refs">
+          <a href="/kondicionery/monoblok">
+            <img src="{% static "/images/monoblok-128x.png"%}" alt="Моноблочные" />
+            <div>Моноблочные</div>
+          </a>
+          <a href="/kondicionery/split-sistema">
+            <img src="{% static "/images/split-sistema-128x.png"%}" alt="Сплит-системы" />
+            <div>Сплит-системы</div>
+          </a>
+          <!-- a href="/kondicionery/multisplit-sistema">
+                        <img src="/images/multisplit-sistema-128x.png" alt="Мультисплит-системы<">
+                        <div>Мультисплит-системы</div>
+                    </a -->
+          <a href="/kondicionery/teplovye-nasosy">
+            <img
+              src="{% static "/images/split-sistema-hpump-128x.png"%}"
+              alt="Сплит-системы с тепловым насосом"
+            />
+            <div>С тепловым насосом</div>
+          </a>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div id="_main-hbtypes" class="_main-refs">
+        <h2 class="mb">
+          <span class="typcn typcn-th-list" style="margin-right: 2pt"></span
+          >Обогреватели по типу блока:
+        </h2>
+        <div id="main-hbtypes" class="main-refs">
+          <a href="/obogrevateli/teploventilyator">
+            <img
+              src="{% static "/images/units/00001450536809686657-128x.gif"%}"
+              alt="Тепловентиляторы"
+            />
+            <div>Тепловентиляторы</div>
+          </a>
+          <a href="/obogrevateli/konvektor">
+            <img
+              src="{% static "/images/units/00001450535901756709-128x.gif"%}"
+              alt="Конвекторы"
+            />
+            <div>Конвекторы</div>
+          </a>
+          <a href="/obogrevateli/gazovaya-teplovaya-pushka">
+            <img
+              src="{% static "/images/units/00001450535346985390-128x.gif"%}"
+              alt="Газовые тепловые пушки<"
+            />
+            <div>Газовые тепловые пушки</div>
+          </a>
+          <a href="/obogrevateli/dizelnaya-teplovaya-pushka">
+            <img
+              src="{% static 'images/units/00001450535619714811-128x.gif' %}"
+              alt="Дизельные тепловые пушки"
+            />
+            <div>Дизельные тепловые пушки</div>
+          </a>
+          <a href="/obogrevateli/maslyanyj-radiator">
+            <img
+              src="{% static "/images/units/00001450536165265731-128x.gif"%}"
+              alt="Маслянные радиаторы"
+            />
+            <div>Маслянные радиаторы</div>
+          </a>
+          <a href="/obogrevateli/elektricheskij-kamin">
+            <img
+              src="{% static "/images/elektricheskij-kamin2.png"%}"
+              alt="Электрические камины"
+            />
+            <div>Электрические камины</div>
+          </a>
+          <a href="/obogrevateli/elektricheskaya-teplovaya-pushka">
+            <img
+              src="{% static "/images/units/00001450536896763816-128x.gif"%}"
+              alt="Электрические тепловые пушки"
+            />
+            <div>Электрические тепловые пушки</div>
+          </a>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!--TMPL_INCLUDE NAME="inc/main.footer.html"-->
+    <!--TMPL_INCLUDE NAME="rtoolbar.html"-->
+    <div id="check-tip"></div>
+    <!--TMPL_INCLUDE NAME="cab.html"-->
+    <!--TMPL_INCLUDE NAME="login.html"-->
+    <script src="/js/libs/jquery/jquery.js"></script>
+    <script src="/js/libs/date.format.js"></script>
+    <script src="/js/libs/jstorage.js"></script>
+    <script src="/js/libs/jquery.url.js"></script>
+    <script src="/js/extlib.js"></script>
+    <script src="/js/nCFG.js"></script>
+    <script src="/js/nCOMMON.2.js"></script>
+    <script src="/js/nDATA.js"></script>
+    <script src="/js/nFIND.js"></script>
+    <script src="/js/libs/carousel/carousel.3.js"></script>
+    <script src="/js/nNEWS.js"></script>
+    <script src="/js/nUSER.1.js"></script>
+    <script src="/js/nHEADER.js"></script>
+    <script>
+      "use strict";
+      var g_main_recommended;
+      $(document).ready(function () {
+        nUSER.init();
+        nSHAVE.init();
+        nFIND.init();
+        nHEADER.init();
+        g_main_recommended = new nCAROUSEL("main-recommended");
+      });
+    </script>
+    <!--TMPL_INCLUDE NAME="footer.html"-->
+    <!--TMPL_INCLUDE NAME="action.html"-->
+    <!-- main.html -->
+  </body>
 </html>
