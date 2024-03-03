@@ -128,28 +128,6 @@ header {
   box-shadow: 0 0 0 1pt rgba(128, 128, 128, 0);
   position: relative;
 }
-#viber:after {
-  position: absolute;
-  top: 2pt;
-  left: 2pt;
-  height: 20pt;
-  width: 20pt;
-  content: "";
-  background-image: url(/images/viber-icon.svg);
-  background-size: contain;
-}
-#whatsapp {
-  display: inline-block;
-  text-decoration: none;
-  background-image: url(/images/whatsapp-icon.svg);
-  background-size: contain;
-  height: 24pt;
-  width: 24pt;
-  opacity: 0.8;
-  border: 1px solid #ccc;
-  border-radius: 4pt;
-  box-shadow: 0 0 0 1pt rgba(128, 128, 128, 0);
-}
 #viber:hover,
 #whatsapp:hover {
   opacity: 1;

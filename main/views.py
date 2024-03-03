@@ -5,10 +5,12 @@ from django.shortcuts import render
 def index(request):
     data = {
         'title' : 'Климатические системы и оборудования',
-        'content' : 'Hello world!'
     }
 
     return render(request, 'main/index.html', data)
 
-def about(request):
-    return HttpResponse('About page')
+def dostavka(request):
+    data = {
+        'title' : 'Доставка по Санкт-Петербургу и Ленинградской области'
+    }
+    return render(request, 'main/dostavka.html', data)

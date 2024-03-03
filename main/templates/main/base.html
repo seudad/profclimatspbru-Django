@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>{{ title }}</title>
+    <!--TMPL_INCLUDE NAME="meta.html"-->
+    <!--TMPL_VAR NAME="META"-->
+    <!--TMPL_VAR NAME="canonical"-->
+    <!--TMPL_INCLUDE NAME="favicon.html"-->
+    {% include "main/blocks/favicon.html" %}
+    <link rel="stylesheet" href="{% static 'css/main.5.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/typicons209.min.css' %}" />
+    {% block css %}{% endblock %}
+    <style>#viber:after {position: absolute;top: 2pt;left: 2pt;height: 20pt;width: 20pt;content: "";background-image: url({% static "/images/viber-icon.svg" %});background-size: contain;} #whatsapp {display: inline-block;text-decoration: none;background-image: url({% static "/images/whatsapp-icon.svg" %});background-size: contain;height: 24pt;width: 24pt;opacity: 0.8;border: 1px solid #ccc;border-radius: 4pt;box-shadow: 0 0 0 1pt rgba(128, 128, 128, 0);}</style>
+    <!--TMPL_INCLUDE NAME="inc/main.css.html"-->
+  </head>
+  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+    <!--TMPL_INCLUDE NAME="../analytics.html"-->
+    <header>
+      <!--TMPL_INCLUDE NAME="header.html"-->
+      {% include "main/blocks/header.html" %}
+      <!--TMPL_INCLUDE NAME="navbar.html"-->
+    </header>
+    {% block workarea %}{% endblock  %}
+    <!--TMPL_INCLUDE NAME="inc/main.footer.html"-->
+    <!--TMPL_INCLUDE NAME="rtoolbar.html"-->
+    <div id="check-tip"></div>
+    <!--TMPL_INCLUDE NAME="cab.html"-->
+    <!--TMPL_INCLUDE NAME="login.html"-->
+    <script src="/js/libs/jquery/jquery.js"></script>
+    <script src="/js/libs/date.format.js"></script>
+    <script src="/js/libs/jstorage.js"></script>
+    <script src="/js/libs/jquery.url.js"></script>
+    <script src="/js/extlib.js"></script>
+    <script src="/js/nCFG.js"></script>
+    <script src="/js/nCOMMON.2.js"></script>
+    <script src="/js/nDATA.js"></script>
+    <script src="/js/nFIND.js"></script>
+    <script src="/js/libs/carousel/carousel.3.js"></script>
+    <script src="/js/nNEWS.js"></script>
+    <script src="/js/nUSER.1.js"></script>
+    <script src="/js/nHEADER.js"></script>
+    <script>
+      "use strict";
+      var g_main_recommended;
+      $(document).ready(function () {
+        nUSER.init();
+        nSHAVE.init();
+        nFIND.init();
+        nHEADER.init();
+        g_main_recommended = new nCAROUSEL("main-recommended");
+      });
+    </script>
+    <!--TMPL_INCLUDE NAME="footer.html"-->
+    {% include "main/blocks/footer.html" %}
+    <!--TMPL_INCLUDE NAME="action.html"-->
+    <!-- main.html -->
+  </body>
+</html>

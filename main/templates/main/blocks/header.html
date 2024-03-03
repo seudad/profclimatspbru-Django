@@ -54,8 +54,14 @@
     <div>
       <div id="header-contacts-phones">
         <!--TMPL_LOOP NAME="contacts-phones"-->
-        <a href="tel:<!--TMPL_VAR NAME='tel'-->" rel="nofollow"
-          ><!--TMPL_VAR NAME='no'--></a
+        <a href="tel:+78005503628" rel="nofollow"
+          ><!--TMPL_VAR NAME='no'-->+7 (800) 550-36-28</a
+        >
+        <a href="tel:+78129041899" rel="nofollow"
+          ><!--TMPL_VAR NAME='no'-->+7 (812) 904-18-99</a
+        >
+        <a href="tel:+79219041899" rel="nofollow"
+          ><!--TMPL_VAR NAME='no'-->+7 (921) 904-18-99</a
         >
         <!--/TMPL_LOOP-->
       </div>
@@ -63,7 +69,7 @@
         <!--TMPL_IF NAME='viber'-->
         <a
           id="viber"
-          href="viber://chat?number=<!--TMPL_VAR NAME='viber'-->"
+          href="viber://chat?number=+79219041899"
           rel="nofollow"
           title="Viber"
         ></a>
@@ -71,7 +77,7 @@
         <!--TMPL_IF NAME='whatsapp'-->
         <a
           id="whatsapp"
-          href="whatsapp://send?phone=<!--TMPL_VAR NAME='whatsapp'-->"
+          href="whatsapp://send?phone=+79219041899"
           rel="nofollow"
           title="Whatsapp"
         ></a>
@@ -85,22 +91,19 @@
     <!--TMPL_IF NAME="to"-->
     <!--TMPL_IF NAME="end"-->
     <div style="margin-top: 0.3em">
-      <!--TMPL_VAR NAME="from"-->-<!--TMPL_VAR NAME="to"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->-<!--TMPL_VAR NAME="end"-->
+      <!--TMPL_VAR NAME="from"-->пн-чт<!--TMPL_VAR NAME="to"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->10:00-20:00<!--TMPL_VAR NAME="end"-->
     </div>
     <!--TMPL_ELSE-->
     <div style="margin-top: 0.3em">
-      <!--TMPL_VAR NAME="from"-->-<!--TMPL_VAR NAME="to"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->
+      <!--TMPL_VAR NAME="from"-->пт<!--TMPL_VAR NAME="to"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->11:00-18:30
     </div>
     <!--/TMPL_IF-->
     <!--TMPL_ELSE-->
     <!--TMPL_IF NAME="end"-->
     <div style="margin-top: 0.3em">
-      <!--TMPL_VAR NAME="from"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->-<!--TMPL_VAR NAME="end"-->
+      <!--TMPL_VAR NAME="from"-->сб-вс:&nbsp;<!--TMPL_VAR NAME="begin"-->выходной
     </div>
     <!--TMPL_ELSE-->
-    <div style="margin-top: 0.3em">
-      <!--TMPL_VAR NAME="from"-->:&nbsp;<!--TMPL_VAR NAME="begin"-->
-    </div>
     <!--/TMPL_IF-->
     <!--/TMPL_IF-->
     <!--/TMPL_LOOP-->
