@@ -1,0 +1,139 @@
+<nav
+  id="navbar"
+  itemscope=""
+  itemtype="http://www.schema.org/SiteNavigationElement"
+>
+  <div class="navbar-item" itemprop="name">
+    <a href="/" itemprop="url" class="navbar-item-current" title="">Главная</a>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/kondicionery" itemprop="url" title="">Кондиционеры</a>
+    <div class="navbar-sublist-show">
+      <div class="navbar-sublist">
+        {% for el in categories %}
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/kondicionery/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/obogrevateli" itemprop="url" title="">Обогреватели</a>
+    <div class="navbar-sublist-show">
+      <div class="navbar-sublist">
+        <div class="navbar-subitem" itemprop="name">
+          <a
+            href="/obogrevateli/gazovaya-teplovaya-pushka"
+            itemprop="url"
+            title=""
+            >Газовые тепловые пушки</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a
+            href="/obogrevateli/dizelnaya-teplovaya-pushka"
+            itemprop="url"
+            title=""
+            >Дизельные тепловые пушки</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/obogrevateli/konvektor" itemprop="url" title=""
+            >Конвекторы</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/obogrevateli/maslyanyj-radiator" itemprop="url" title=""
+            >Масляные радиаторы</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/obogrevateli/teploventilyator" itemprop="url" title=""
+            >Тепловентиляторы</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/obogrevateli/teplovye-nasosy" itemprop="url" title=""
+            >Тепловые насосы</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/obogrevateli/elektricheskij-kamin" itemprop="url" title=""
+            >Электрические камины</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a
+            href="/obogrevateli/elektricheskaya-teplovaya-pushka"
+            itemprop="url"
+            title=""
+            >Электрические тепловые пушки</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/ventilyaciya" itemprop="url" title="">Вентиляция</a>
+    <div class="navbar-sublist-show">
+      <div class="navbar-sublist">
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/ventilyaciya/avtomatika" itemprop="url" title=""
+            >Автоматика</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/ventilyaciya/brizery" itemprop="url" title="">Бризеры</a>
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/ventilyaciya/ventilyatory" itemprop="url" title=""
+            >Вентиляторы</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/ventilyaciya/vozduxovody" itemprop="url" title=""
+            >Воздуховоды</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/ventilyaciya/vozduxoraspredeliteli" itemprop="url" title=""
+            >Воздухораспределители, диффузоры</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a
+            href="/ventilyaciya/kompaktnye-ventustanovki"
+            itemprop="url"
+            title=""
+            >Компактные приточно-вытяжные установки</a
+          >
+        </div>
+        <div class="navbar-subitem" itemprop="name">
+          <a href="/ventilyaciya/rekuperatory" itemprop="url" title=""
+            >Рекуператоры воздуха</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/dostavka" itemprop="url" title="">Доставка</a>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/ustanovka" itemprop="url" title="">Установка</a>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/obsluzhivanie" itemprop="url" title="">Обслуживание</a>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/info" itemprop="url" title="">Справочная информация.</a>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/kontakty" itemprop="url" title="">Контакты</a>
+  </div>
+  <div class="navbar-item" itemprop="name">
+    <a href="/vacansii" itemprop="url" title="">Вакансии</a>
+  </div>
+  <div class="clr"></div>
+</nav>

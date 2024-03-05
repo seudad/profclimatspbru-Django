@@ -1250,10 +1250,10 @@
                 value="31.1"
               />
               <div id="cunits-list-items">
-                {% for prod in goods %}
+                {% for prod in item %}
                 <div class="units-item">
                     <div class="units-item-desc">
-                    <span class="unit-item-select"><a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию">{{ prod.title }}</a></span>
+                    <span class="unit-item-select"><a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию">{{ prod.name }}</a></span>
                     </div>
                     <div class="units-item-spec">
                     <div class="units-item-spec-attr">

@@ -18,8 +18,15 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 
+from profclimatorg.settings import DEBUG
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
     path('kondicionery/', include('kondicionery.urls', namespace='kondicionery')),
 ]
+
+if DEBUG:
+    urlpatterns += [
+        path("__debug__/", include("debug_toolbar.urls")),
+    ]
