@@ -77,42 +77,12 @@
     <a href="/ventilyaciya" itemprop="url" title="">Вентиляция</a>
     <div class="navbar-sublist-show">
       <div class="navbar-sublist">
-        <div class="navbar-subitem" itemprop="name">
-          <a href="/ventilyaciya/avtomatika" itemprop="url" title=""
-            >Автоматика</a
-          >
-        </div>
-        <div class="navbar-subitem" itemprop="name">
-          <a href="/ventilyaciya/brizery" itemprop="url" title="">Бризеры</a>
-        </div>
-        <div class="navbar-subitem" itemprop="name">
-          <a href="/ventilyaciya/ventilyatory" itemprop="url" title=""
-            >Вентиляторы</a
-          >
-        </div>
-        <div class="navbar-subitem" itemprop="name">
-          <a href="/ventilyaciya/vozduxovody" itemprop="url" title=""
-            >Воздуховоды</a
-          >
-        </div>
-        <div class="navbar-subitem" itemprop="name">
-          <a href="/ventilyaciya/vozduxoraspredeliteli" itemprop="url" title=""
-            >Воздухораспределители, диффузоры</a
-          >
-        </div>
-        <div class="navbar-subitem" itemprop="name">
-          <a
-            href="/ventilyaciya/kompaktnye-ventustanovki"
-            itemprop="url"
-            title=""
-            >Компактные приточно-вытяжные установки</a
-          >
-        </div>
-        <div class="navbar-subitem" itemprop="name">
-          <a href="/ventilyaciya/rekuperatory" itemprop="url" title=""
-            >Рекуператоры воздуха</a
-          >
-        </div>
+        {% tag_categories_vent as categories %}
+        {% for el in categories %}
+          <div class="navbar-subitem" itemprop="name">
+            <a href="/ventilyaciya/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>

@@ -1,0 +1,35 @@
+<div id="cunits-list-items">
+    {% for prod in item %}
+    <div class="units-item">
+        <div class="units-item-desc">
+        <span class="unit-item-select"><a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию">{{ prod.name }}</a></span>
+        </div>
+        <div class="units-item-spec">
+        <div class="units-item-spec-attr">
+        <span class="val-cold-power"></span>{{ prod.cooled }}
+        </div>
+        
+        <div class="units-item-spec-attr">
+        <span class="val-heat-power"></span>{{ prod.heater }}
+        </div>
+        
+        
+        <div class="units-item-spec-attr">Компрессор: {{prod.compress}}</div>
+        
+        <div class="units-item-spec-attr">
+        <span class="val-cold-area help" title="Для средней освещенности и высоты потолка 2,7м"></span>{{prod.square}}
+        </div>
+        </div>
+        
+        <div class="units-item-thumbnail">
+          {% if prod.img %}
+            <a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию"><img src="{{prod.img.url}}" alt="{{prod.name}}" class="units-item-img"></a>
+          {% endif %}
+        </div>
+        
+        <div class="units-item-article">{{prod.articul}}</div>
+        <div class="units-item-price"><span class="units-item-pfx">цена</span>{{ prod.price }}<span class="val-currency"></span></div>
+        <div class="units-item-buy" title="{{prod.name}}" data-group="cu" data-key="/kondicionery/ballu-split-sistema-nastennyj-bso-09hn1_20y" data-title="{{prod.name}}" data-rub="{{prod.price}}">Купить</div>
+    </div>
+    {% endfor %}
+</div>

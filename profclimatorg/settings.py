@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
     'main',
     'kondicionery',
+    'ventilyacia',
+    'obogrevateli',
 ]
 
 MIDDLEWARE = [

@@ -1067,22 +1067,22 @@
           <td id="_cunits-list">
             <div id="cunits-recipe">
               <a class="recipe" href="/kondicionery/dlya-kvartiry">
-                <img src="/images/recipe/01kvart.png" alt="Для квартиры" />
+                <img src="{% static "/images/recipe/01kvart.png" %}" alt="Для квартиры" />
                 <h3>Для квартиры</h3>
               </a>
               <a class="recipe" href="/kondicionery/dlya-doma-dachi-kottedzha">
                 <img
-                  src="/images/recipe/01dom.png"
+                  src="{% static "/images/recipe/01dom.png" %}"
                   alt="Для дома, дачи, коттеджа"
                 />
                 <h3>Для дома, дачи, коттеджа</h3>
               </a>
               <a class="recipe" href="/kondicionery/dlya-kafe-magazina">
-                <img src="/images/recipe/01kafe.png" alt="Для кафе, магазина" />
+                <img src="{% static "/images/recipe/01kafe.png" %}" alt="Для кафе, магазина" />
                 <h3>Для кафе, магазина</h3>
               </a>
               <a class="recipe" href="/kondicionery/dlya-ofisa">
-                <img src="/images/recipe/01office.png" alt="Для офиса" />
+                <img src="{% static "/images/recipe/01office.png" %}" alt="Для офиса" />
                 <h3>Для офиса</h3>
               </a>
               <a
@@ -1090,13 +1090,13 @@
                 href="/kondicionery/dlya-proizvodstvennyh-pomeshchenij "
               >
                 <img
-                  src="/images/recipe/01prod.png"
+                  src="{% static "/images/recipe/01prod.png" %}"
                   alt="Для производственных помещений"
                 />
                 <h3>Для производственных помещений</h3>
               </a>
               <a class="recipe" href="/kondicionery/dlya-servernyh">
-                <img src="/images/recipe/01serv.png" alt="Для серверных" />
+                <img src="{% static "/images/recipe/01serv.png" %}" alt="Для серверных" />
                 <h3>Для серверных</h3>
               </a>
               <div class="clr"></div>
@@ -1249,42 +1249,7 @@
                 type="hidden"
                 value="31.1"
               />
-              <div id="cunits-list-items">
-                {% for prod in item %}
-                <div class="units-item">
-                    <div class="units-item-desc">
-                    <span class="unit-item-select"><a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию">{{ prod.name }}</a></span>
-                    </div>
-                    <div class="units-item-spec">
-                    <div class="units-item-spec-attr">
-                    <span class="val-cold-power"></span>{{ prod.cooled }}
-                    </div>
-                    
-                    <div class="units-item-spec-attr">
-                    <span class="val-heat-power"></span>{{ prod.heater }}
-                    </div>
-                    
-                    
-                    <div class="units-item-spec-attr">Компрессор: {{prod.compress}}</div>
-                    
-                    <div class="units-item-spec-attr">
-                    <span class="val-cold-area help" title="Для средней освещенности и высоты потолка 2,7м"></span>{{prod.square}}
-                    </div>
-                    </div>
-                    
-                    <div class="units-item-thumbnail">
-                      {% if prod.img %}
-                        <a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию"><img src="{{prod.img.url}}" alt="{{prod.name}}" class="units-item-img"></a>
-                      {% endif %}
-                    </div>
-                    
-                    <div class="units-item-article">{{prod.articul}}</div>
-                    <div class="units-item-price"><span class="units-item-pfx">цена</span>{{ prod.price }}<span class="val-currency"></span></div>
-                    <div class="units-item-buy" title="{{prod.name}}" data-group="cu" data-key="/kondicionery/ballu-split-sistema-nastennyj-bso-09hn1_20y" data-title="{{prod.name}}" data-rub="{{prod.price}}">Купить</div>
-                </div>
-                {% endfor %}
-                
-                </div>
+              {% include "blocks/cunits_items.html" %}
               <div id="pages-index">
                 <a class="pg_refs-prev-off" rel="nofollow" href="?p=1"></a
                 ><a
@@ -1431,3 +1396,21 @@
   </div>
 </div>
 {% endblock workarea %}
+{% block scripts %}
+<script src="{% static "/js/libs/jquery/jquery.js" %}"></script>
+<script src="{% static "/js/libs/jqueryui/jquery-ui.js" %}"></script>
+<script src="{% static "/js/libs/date.format.js" %}"></script>
+<script src="{% static "/js/libs/jstorage.js" %}"></script>
+<script src="{% static "/js/libs/jquery.url.js" %}"></script>
+<script src="{% static "/js/nCONSOLE.js" %}"></script>
+<script src="{% static "/js/extlib.js" %}"></script>
+<script src="{% static "/js/nCFG.js" %}"></script>
+<script src="{% static "/js/nSITE.js" %}"></script>
+<script src="{% static "/js/nCOMMON.js" %}"></script>
+<script src="{% static "/js/nAJAX.js" %}"></script>
+<script src="{% static "/js/nPOPUPMENU.2.js" %}"></script>
+<script src="{% static "/js/nFIND.js" %}"></script>
+<script src="{% static "/js/nHEADER.js" %}"></script>
+<script src="{% static "/js/nUSER.1.js" %}"></script>
+<script src="{% static "/js/nConditioners.3.js" %}"></script>
+{% endblock  %}

@@ -1,0 +1,20 @@
+{% extends "main/base.html" %} {% load static %}
+{% block scripts %}
+<script src="{% static "/js/libs/jquery/jquery.js" %}"></script>
+<script src="{% static "/js/libs/jqueryui/jquery-ui.js" %}"></script>
+<script src="{% static "/js/libs/date.format.js" %}"></script>
+<script src="{% static "/js/libs/jstorage.js" %}"></script>
+<script src="{% static "/js/libs/jquery.url.js" %}"></script>
+<script src="{% static "/js/nCONSOLE.js" %}"></script>
+<script src="{% static "/js/extlib.js" %}"></script>
+<script src="{% static "/js/nCFG.js" %}"></script>
+<script src="{% static "/js/nSITE.js" %}"></script>
+<script src="{% static "/js/nCOMMON.js" %}"></script>
+<script src="{% static "/js/nAJAX.js" %}"></script>
+<script src="{% static "/js/nPOPUPMENU.2.js" %}"></script>
+<script src="{% static "/js/nFIND.js" %}"></script>
+<script src="{% static "/js/nHEADER.js" %}"></script>
+<script src="{% static "/js/nUSER.1.js" %}"></script>
+<script>"use strict"; $(document).ready(function(){nUSER.init();nSHAVE.init();nHEADER.init();nFIND.init()});</script>
+{% comment %} <script src="{% static "/js/nVentilation.1.js" %}"></script> {% endcomment %}
+{% endblock scripts %}

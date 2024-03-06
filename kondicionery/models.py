@@ -15,8 +15,7 @@ class Categories(models.Model):
         verbose_name_plural = 'Категории'
 
     def __str__(self):
-        return self.name    
-    
+        return self.name              
 
 class Compressor(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название') 
@@ -47,8 +46,8 @@ class Products(models.Model):
 
     class Meta:
         db_table = 'products'
-        verbose_name = 'Продукт'
-        verbose_name_plural = 'Продукты'
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
 
     def __str__(self):
         return self.name
