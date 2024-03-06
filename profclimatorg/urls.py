@@ -17,8 +17,9 @@ Including another URLconf
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
 
-from profclimatorg.settings import DEBUG
+from profclimatorg import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +27,8 @@ urlpatterns = [
     path('kondicionery/', include('kondicionery.urls', namespace='kondicionery')),
 ]
 
-if DEBUG:
+if settings.DEBUG:
     urlpatterns += [
         path("__debug__/", include("debug_toolbar.urls")),
     ]
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

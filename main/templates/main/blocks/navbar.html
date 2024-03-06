@@ -1,8 +1,6 @@
-<nav
-  id="navbar"
-  itemscope=""
-  itemtype="http://www.schema.org/SiteNavigationElement"
->
+{% load nav_tags %}
+
+<nav id="navbar" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
   <div class="navbar-item" itemprop="name">
     <a href="/" itemprop="url" class="navbar-item-current" title="">Главная</a>
   </div>
@@ -10,6 +8,7 @@
     <a href="/kondicionery" itemprop="url" title="">Кондиционеры</a>
     <div class="navbar-sublist-show">
       <div class="navbar-sublist">
+        {% tag_categories as categories %}
         {% for el in categories %}
         <div class="navbar-subitem" itemprop="name">
           <a href="/kondicionery/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>

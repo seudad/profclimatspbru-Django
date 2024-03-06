@@ -1261,24 +1261,26 @@
                     </div>
                     
                     <div class="units-item-spec-attr">
-                    <span class="val-heat-power"></span>{{ prod.heat }}
+                    <span class="val-heat-power"></span>{{ prod.heater }}
                     </div>
                     
                     
-                    <div class="units-item-spec-attr">Компрессор: «on/off»</div>
+                    <div class="units-item-spec-attr">Компрессор: {{prod.compress}}</div>
                     
                     <div class="units-item-spec-attr">
-                    <span class="val-cold-area help" title="Для средней освещенности и высоты потолка 2,7м"></span>28
+                    <span class="val-cold-area help" title="Для средней освещенности и высоты потолка 2,7м"></span>{{prod.square}}
                     </div>
                     </div>
                     
-                    
-                    <div class="units-item-thumbnail"><a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию"><img src="/images/units/00000000001586611269-1123-240x.jpg" alt="Кондиционер сплит-система настенный Ballu BSO-09HN1_20Y (серия Olympio Edge)" class="units-item-img"></a>
+                    <div class="units-item-thumbnail">
+                      {% if prod.img %}
+                        <a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию"><img src="{{prod.img.url}}" alt="{{prod.name}}" class="units-item-img"></a>
+                      {% endif %}
                     </div>
                     
-                    <div class="units-item-article">8406</div>
+                    <div class="units-item-article">{{prod.articul}}</div>
                     <div class="units-item-price"><span class="units-item-pfx">цена</span>{{ prod.price }}<span class="val-currency"></span></div>
-                    <div class="units-item-buy" title="{{prod.title}}" data-group="cu" data-key="/kondicionery/ballu-split-sistema-nastennyj-bso-09hn1_20y" data-title="Кондиционер сплит-система настенный Ballu BSO-09HN1_20Y (серия Olympio Edge)" data-rub="28000">Купить</div>
+                    <div class="units-item-buy" title="{{prod.name}}" data-group="cu" data-key="/kondicionery/ballu-split-sistema-nastennyj-bso-09hn1_20y" data-title="{{prod.name}}" data-rub="{{prod.price}}">Купить</div>
                 </div>
                 {% endfor %}
                 

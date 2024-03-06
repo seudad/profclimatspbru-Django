@@ -27,6 +27,9 @@ class Compressor(models.Model):
         verbose_name = 'Компрессор'
         verbose_name_plural = 'Компрессоры'
 
+    def __str__(self):
+        return self.name
+
 class Products(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название') 
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
@@ -34,8 +37,10 @@ class Products(models.Model):
     img = models.ImageField(upload_to='prod_images', blank=True, null=True, verbose_name='Изображение')
     price = models.DecimalField(default=0, verbose_name='Цена', decimal_places=0, max_digits=10)
     discount = models.DecimalField(default=0, verbose_name='Скидка в процентах', decimal_places=0, max_digits=3)
-    cooled = models.DecimalField(default=0, verbose_name='Охлаждение', decimal_places=2, max_digits=4)
-    heater = models.DecimalField(default=0, verbose_name='Обогрев', decimal_places=2, max_digits=4)
+    cooled = models.DecimalField(default=0, verbose_name='Охлаждение', decimal_places=1, max_digits=4)
+    heater = models.DecimalField(default=0, verbose_name='Обогрев', decimal_places=1, max_digits=4)
+    articul = models.DecimalField(default=0, verbose_name='Артикул', decimal_places=0, max_digits=4)
+    square = models.IntegerField(default=0, verbose_name="Площадь охлаждения")
     compress = models.ForeignKey(to=Compressor, on_delete=models.PROTECT, verbose_name='Компрессор')
     category = models.ForeignKey(to=Categories, on_delete=models.PROTECT, verbose_name='Категория')
     
