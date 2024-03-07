@@ -1,2 +1,39 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "css/unit-info.5.css" %}">
+{% endblock css %}
+{% block workarea %}
+<div id="unit-info" class="workarea">
+    <div id="unit-info-content">
+        <h1>{{item.name}}</h1>
+        <div id="unit-info-menu">
+            <div class="unit-info-menu-item unit-info-menu-item-cur" id="unit-info-menu-desc">Описание</div>
+            <div class="unit-info-menu-item" id="unit-info-menu-spec">Характеристики</div>
+            <!--div class="unit-info-menu-item" id="unit-info-menu-reply">Отзывы <span id="unit-info-menu-replys-no">0</span></div-->
+            <!--div class="unit-info-menu-item" id="unit-info-menu-talks">Обсуждения <span id="unit-info-menu-talks-no">0</span></div-->
+            <div class="unit-info-menu-item" id="unit-info-menu-docs">Документы <span id="unit-info-menu-docs-no">1</span></div>
+            <div class="unit-info-menu-item" id="unit-info-menu-refs">Ссылки</div>
+        </div>
+        <div id="unit-info-desc" class="unit-info">{{item.description | safe }}</div>
+    </div>
+</div>
+{% endblock workarea %}
+{% block scripts %}
+<script src="{% static "/js/libs/jquery/jquery.js" %}"></script>
+<script src="{% static "/js/libs/jqueryui/jquery-ui.js" %}"></script>
+<script src="{% static "/js/libs/date.format.js" %}"></script>
+<script src="{% static "/js/libs/jstorage.js" %}"></script>
+<script src="{% static "/js/libs/jquery.url.js" %}"></script>
+<script src="{% static "/js/nCONSOLE.js" %}"></script>
+<script src="{% static "/js/extlib.js" %}"></script>
+<script src="{% static "/js/nCFG.js" %}"></script>
+<script src="{% static "/js/nSITE.js" %}"></script>
+<script src="{% static "/js/nCOMMON.js" %}"></script>
+<script src="{% static "/js/nAJAX.js" %}"></script>
+<script src="{% static "/js/nPOPUPMENU.2.js" %}"></script>
+<script src="{% static "/js/nFIND.js" %}"></script>
+<script src="{% static "/js/nHEADER.js" %}"></script>
+<script src="{% static "/js/nUSER.1.js" %}"></script>
+<script src="{% static "/js/nUINFO.js" %}"></script>
+{% endblock  %}

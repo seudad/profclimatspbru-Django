@@ -1,13 +1,12 @@
-from email.mime import image
-from email.policy import default
-from tabnanny import verbose
-from unicodedata import category
+import uuid
 from django.db import models
 
 # Create your models here.
 class Categories(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название') 
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
+    description = models.TextField(blank=True, null=True,verbose_name='Описание')
+    title = models.CharField(max_length=150, unique=True, verbose_name='Титульник') 
 
     class Meta:
         db_table = 'category'
@@ -15,7 +14,12 @@ class Categories(models.Model):
         verbose_name_plural = 'Категории'
 
     def __str__(self):
-        return self.name              
+        return self.name
+
+    def more(self):
+        if self.slug == 'rashodnye-materialy-dlya-kondicionerov' or 'zapchasti-k-kondicioneram':
+            return 'ok'
+        
 
 class Compressor(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название') 

@@ -11,7 +11,7 @@
         {% tag_categories as categories %}
         {% for el in categories %}
         <div class="navbar-subitem" itemprop="name">
-          <a href="/kondicionery/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>
+          <a href="{% url "kondicionery:subitem" el.slug %}" itemprop="url" title="">{{el.name}}</a>
         </div>
         {% endfor %}
       </div>

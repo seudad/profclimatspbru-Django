@@ -1,8 +1,156 @@
+<div id="cunits-list">
+  <input
+    id="req-manufacturer"
+    name="req-manufacturer"
+    type="hidden"
+    value=""
+  />
+  <input id="req-utype" name="req-utype" type="hidden" value="" />
+  <input id="req-btype" name="req-btype" type="hidden" value="" />
+  <input
+    id="req-format"
+    name="req-format"
+    type="hidden"
+    value="tile"
+  />
+  <input
+    id="req-pgsize"
+    name="req-pgsize"
+    type="hidden"
+    value="15"
+  />
+  <input id="req-pgno" name="req-pgno" type="hidden" value="1" />
+  <input id="req-sort" name="req-sort" type="hidden" value="rd" />
+  <input id="req-photo" name="req-photo" type="hidden" value="1" />
+  <input id="req-color" name="req-color" type="hidden" value="" />
+  <input id="pg_count" name="pg_count" type="hidden" value="52" />
+  <input id="d1r" name="d1r" type="hidden" value="91.3336" />
+  <input
+    id="price-min"
+    name="price-min"
+    type="hidden"
+    value="18500"
+  />
+  <input
+    id="price-max"
+    name="price-max"
+    type="hidden"
+    value="519300"
+  />
+  <input
+    id="service_area-min"
+    name="service_area-min"
+    type="hidden"
+    value="9999"
+  />
+  <input
+    id="service_area-max"
+    name="service_area-max"
+    type="hidden"
+    value="0"
+  />
+  <input
+    id="noise_level-min"
+    name="noise_level-min"
+    type="hidden"
+    value="999"
+  />
+  <input
+    id="noise_level-max"
+    name="noise_level-max"
+    type="hidden"
+    value="0"
+  />
+  <input
+    id="power_cooling-min"
+    name="power_cooling-min"
+    type="hidden"
+    value="1.3"
+  />
+  <input
+    id="power_cooling-max"
+    name="power_cooling-max"
+    type="hidden"
+    value="28.1"
+  />
+  <input
+    id="power_heating-min"
+    name="power_heating-min"
+    type="hidden"
+    value="0.0"
+  />
+  <input
+    id="power_heating-max"
+    name="power_heating-max"
+    type="hidden"
+    value="31.1"
+  />
+  <input id="req_inv" name="req_inv" type="hidden" value="3" />
+  <input
+    id="req_price-min"
+    name="req_price-min"
+    type="hidden"
+    value="18500"
+  />
+  <input
+    id="req_price-max"
+    name="req_price-max"
+    type="hidden"
+    value="519300"
+  />
+  <input
+    id="req_service_area-min"
+    name="req_service_area-min"
+    type="hidden"
+    value="0"
+  />
+  <input
+    id="req_service_area-max"
+    name="req_service_area-max"
+    type="hidden"
+    value="9999999"
+  />
+  <input
+    id="req_noise_level-min"
+    name="req_noise_level-min"
+    type="hidden"
+    value="0"
+  />
+  <input
+    id="req_noise_level-max"
+    name="req_noise_level-max"
+    type="hidden"
+    value="999"
+  />
+  <input
+    id="req_power_cooling-min"
+    name="req_power_cooling-min"
+    type="hidden"
+    value="1.3"
+  />
+  <input
+    id="req_power_cooling-max"
+    name="req_power_cooling-max"
+    type="hidden"
+    value="28.1"
+  />
+  <input
+    id="req_power_heating-min"
+    name="req_power_heating-min"
+    type="hidden"
+    value="0.0"
+  />
+  <input
+    id="req_power_heating-max"
+    name="req_power_heating-max"
+    type="hidden"
+    value="31.1"
+  />
 <div id="cunits-list-items">
     {% for prod in item %}
     <div class="units-item">
         <div class="units-item-desc">
-        <span class="unit-item-select"><a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию">{{ prod.name }}</a></span>
+        <span class="unit-item-select"><a href="{% url "kondicionery:cunit" prod.slug %}" title="Перейти к описанию">{{ prod.name }}</a></span>
         </div>
         <div class="units-item-spec">
         <div class="units-item-spec-attr">
@@ -23,7 +171,7 @@
         
         <div class="units-item-thumbnail">
           {% if prod.img %}
-            <a href="{% url "kondicionery:cunit" %}" title="Перейти к описанию"><img src="{{prod.img.url}}" alt="{{prod.name}}" class="units-item-img"></a>
+            <a href="{% url "kondicionery:cunit" prod.slug %}" title="Перейти к описанию"><img src="{{prod.img.url}}" alt="{{prod.name}}" class="units-item-img"></a>
           {% endif %}
         </div>
         

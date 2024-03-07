@@ -1,0 +1,32 @@
+
+  <h1 itemprop="headline">{{category.name}}</h1>
+  <div
+    id="navbar-path"
+    itemscope=""
+    itemtype="http://schema.org/BreadcrumbList"
+  >
+    <span
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="http://schema.org/ListItem"
+      ><a class="breadcrumbs" itemprop="item" href="/"
+        ><span itemprop="name">Главная</span></a
+      ><meta itemprop="position" content="1" /></span
+    ><span class="breadcrumbs_sep"></span
+    ><span
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="http://schema.org/ListItem"
+      ><a class="breadcrumbs" itemprop="item" href="/kondicionery"
+        ><span itemprop="name">Кондиционеры</span></a
+      ><meta itemprop="position" content="2" /></span
+    ><span class="breadcrumbs_sep"></span
+    ><span
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="http://schema.org/ListItem"
+      ><a class="breadcrumbs" itemprop="item" href="/kondicionery/{{category.slug}}"
+        ><span itemprop="name">{{category.name}}</span></a
+      ><meta itemprop="position" content="3"
+    /></span>
+  </div>

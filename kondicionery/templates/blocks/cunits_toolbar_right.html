@@ -1,0 +1,81 @@
+<!-- units-toolbar.html begin -->
+<div
+  class="unit-list-button"
+  id="units-filter-hide"
+  title="Скрыть панель фильтров"
+  style="display: inline-block"
+>
+  Скрыть фильтры
+</div>
+<div
+  class="unit-list-button"
+  id="units-filter-show"
+  title="Показать панель фильтров"
+  style="display: none"
+>
+  Показать фильтры
+</div>
+<div
+  id="units-toolbar-sort-menu"
+  class="unit-list-popup-opt"
+  style="display: none"
+>
+  <!--div data-value="rd">Без сортировки</div-->
+  <div data-value="ma">Сортировка: по производителю</div>
+  <div data-value="pa">Сортировка: по цене - сначала недорогие</div>
+  <div data-value="pd">Сортировка: по цене - сначала дорогие</div>
+  <!-- div data-value="dd">Сортировка: по новизне</div -->
+  <!-- div data-value="sd">Сортировка: по популярности</div -->
+</div>
+<div
+  id="units-toolbar-psize-menu"
+  class="unit-list-popup-opt"
+  style="display: none"
+>
+  <div data-value="10">Показывать по 10</div>
+  <div data-value="15">Показывать по 15</div>
+  <div data-value="30">Показывать по 30</div>
+  <div data-value="50">Показывать по 50</div>
+  <div data-value="999999">Показывать все</div>
+</div>
+<div
+  class="unit-list-popup"
+  data-value="15"
+  data-list="units-toolbar-psize-menu"
+  id="units-toolbar-psize"
+>
+  Показывать по 15
+</div>
+<div
+  class="unit-list-popup"
+  data-value="rd"
+  data-list="units-toolbar-sort-menu"
+  id="units-toolbar-sort"
+>
+  Сортировать по
+</div>
+<a
+  class="unit-list-button unit-list-button-off"
+  id="units-toolbar-show-table"
+  style="font-size: 18pt"
+  title="Подробная форма"
+  href="?f=table"
+  ><span class="typcn typcn-th-list-outline"></span
+></a>
+<a
+  class="unit-list-button"
+  id="units-toolbar-show-tile"
+  style="font-size: 18pt"
+  title="Краткая форма"
+  href="?f=tile"
+  ><span class="typcn typcn-th-small-outline"></span
+></a>
+<a
+  class="unit-list-button"
+  id="units-toolbar-refresh"
+  style="font-size: 18pt"
+  title="Обновить"
+  href=""
+  ><span class="typcn typcn-arrow-sync"></span
+></a>
+<!-- units-toolbar.html end -->
