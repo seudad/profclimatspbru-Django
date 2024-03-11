@@ -1,12 +1,14 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-from kondicionery.models import Categories
+from main.models import Navbar
 
 def index(request):
 
+    navbar = Navbar.objects.all()
+
     data = {
         'title' : 'Климатические системы и оборудования',
+        'navbar' : navbar,
     }
 
     return render(request, 'main/index.html', data)

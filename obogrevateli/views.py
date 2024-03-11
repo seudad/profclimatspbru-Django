@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from obogrevateli.models import Categories_Heat
 # Create your views here.
 def obogrevateli(request):
 

@@ -2,20 +2,21 @@
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static "css/unit-info.5.css" %}">
+<style>#unit-info-location a{color:#2E9AFE;}#unit-info-images div.current{border:3pt solid #2E9AFE;}.unit-item-spec-inv{display:inline-block;margin-left:0.3em;width:1em;height:1em;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);position:relative;}.unit-item-spec-inv:before{position:absolute;top:-5pt;left:0px;font-family:'typicons';color:#00aa00;font-size:18pt;content:"\e070";}</style>
 {% endblock css %}
 {% block workarea %}
 <div id="unit-info" class="workarea">
     <div id="unit-info-content">
-        <h1>{{item.name}}</h1>
+        <h1>{{prod.name}}</h1>
         <div id="unit-info-menu">
             <div class="unit-info-menu-item unit-info-menu-item-cur" id="unit-info-menu-desc">Описание</div>
             <div class="unit-info-menu-item" id="unit-info-menu-spec">Характеристики</div>
             <!--div class="unit-info-menu-item" id="unit-info-menu-reply">Отзывы <span id="unit-info-menu-replys-no">0</span></div-->
             <!--div class="unit-info-menu-item" id="unit-info-menu-talks">Обсуждения <span id="unit-info-menu-talks-no">0</span></div-->
-            <div class="unit-info-menu-item" id="unit-info-menu-docs">Документы <span id="unit-info-menu-docs-no">1</span></div>
+            <div class="unit-info-menu-item" id="unit-info-menu-docs">Документы <span id="unit-info-menu-docs-no"></span></div>
             <div class="unit-info-menu-item" id="unit-info-menu-refs">Ссылки</div>
         </div>
-        <div id="unit-info-desc" class="unit-info">{{item.description | safe }}</div>
+        <div id="unit-info-desc" class="unit-info">{{prod.description | safe }}</div>
     </div>
 </div>
 {% endblock workarea %}

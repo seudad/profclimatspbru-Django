@@ -892,15 +892,6 @@ input.money {
   float: left;
   margin: 3pt;
 }
-#footer-social-twitter {
-  display: inline-block;
-  font-size: 180%;
-  margin: 3pt;
-  width: 32px;
-  height: 32px;
-  background: url("/images/footer-social_32x32.png") 0 0 no-repeat;
-  background-size: cover;
-}
 #footer-social-vk {
   display: inline-block;
   font-size: 180%;
