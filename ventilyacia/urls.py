@@ -5,6 +5,6 @@ from ventilyacia import views
 app_name = 'ventilyacia'
 
 urlpatterns = [
-    path('', views.ventilyacia, name='ventilyacia'),
+    path('', views.ventilyacia, name='index'),
     path('vunit/', views.vunit, name='vunit'),
 ]

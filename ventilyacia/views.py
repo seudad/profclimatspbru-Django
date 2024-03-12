@@ -4,7 +4,7 @@ from django.shortcuts import render
 def ventilyacia(request):
 
     context = {
-        'title' : 'Вентиляция',
+        'title' : 'Системы вентиляции в СПб — проектирование и монтаж оборудования ПрофКлимат',
     }
     return render(request, 'vent/vent.html', context)
 

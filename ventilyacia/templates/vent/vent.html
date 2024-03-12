@@ -1,4 +1,7 @@
 {% extends "main/base.html" %} {% load static %}
+{% block title %}
+<title>{{title}}</title>
+{% endblock title %}
 {% block scripts %}
 <script src="{% static "/js/libs/jquery/jquery.js" %}"></script>
 <script src="{% static "/js/libs/jqueryui/jquery-ui.js" %}"></script>

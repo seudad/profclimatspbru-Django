@@ -1,0 +1,31 @@
+{% extends "main/base.html" %} {% load static %}
+{% block title %}
+{{navbar.title | safe}}
+{% endblock title %}
+
+{% block scripts %}
+<script src="{% static "/js/libs/jquery/jquery.js" %}"></script>
+<script src="{% static "/js/libs/date.format.js" %}"></script>
+<script src="{% static "/js/libs/jstorage.js" %}"></script>
+<script src="{% static "/js/libs/jquery.url.js" %}"></script>
+<script src="{% static "/js/extlib.js" %}"></script>
+<script src="{% static "/js/libs/carousel/carousel.3.js" %}"></script>
+<script src="{% static "/js/nCOMMON.2.js" %}"></script>
+<script src="{% static "/js/nCFG.js" %}"></script>
+<script src="{% static "/js/nDATA.js" %}"></script>
+<script src="{% static "/js/nFIND.js" %}"></script>
+<script src="{% static "/js/nNEWS.js" %}"></script>
+<script src="{% static "/js/nUSER.1.js" %}"></script>
+<script src="{% static "/js/nHEADER.js" %}"></script>
+<script>
+  "use strict";
+  var g_main_recommended;
+  $(document).ready(function () {
+    nUSER.init();
+    nSHAVE.init();
+    nFIND.init();
+    nHEADER.init();
+    g_main_recommended = new nCAROUSEL("main-recommended");
+  });
+</script>
+{% endblock  %}

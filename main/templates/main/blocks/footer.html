@@ -15,15 +15,14 @@
     </div>
     <div id="footer-contact">
       <div id="footer-contact-org">
-        <!--TMPL_VAR NAME="footer-contact-org"-->
+        ООО «Профклимат»
       </div>
       <div id="footer-contact-phone">
-        <!--T1MPL_VAR NAME="footer-contact-phone"-->
-        <!--TMPL_LOOP NAME="contacts-phones"-->
-        <a href="tel:<!--TMPL_VAR NAME='tel'-->" rel="nofollow"
-          ><!--TMPL_VAR NAME='no'--></a
-        ><br />
-        <!--/TMPL_LOOP-->
+        <a href="tel:+78005503628" rel="nofollow">+7 (800) 550-36-28</a>
+        <br>
+        <a href="tel:+79219041899" rel="nofollow">+7 (921) 904-18-99</a>
+        <br>
+        <a href="tel:+78129041899" rel="nofollow">+7 (812) 904-18-99</a>
       </div>
       <div style="margin-left: 3pt">
         <span style="font-size: 130%">&#9993;</span>
@@ -37,36 +36,22 @@
         >
       </div>
       <div id="footer-contact-address">
-        <!--TMPL_VAR NAME="footer-contact-address"-->
+        195271, город Санкт-Петербург, Бестужевская улица, дом 10, ТЦ Бестужевский, помещение 245
       </div>
     </div>
     <div id="footer-social">
-      <a
-        id="footer-social-vk"
-        href="https://vk.com/club135867292"
-        rel="nofollow"
-        title="«Профклимат СПб» во ВКонтакте"
-      ></a>
+      <a id="footer-social-vk" href="https://vk.com/club135867292" rel="nofollow" title="«Профклимат СПб» во ВКонтакте"></a>
       <!--a id="contact-social-vk" href="https://vk.com/profclimatspb" title="«Профклимат СПб» во ВКонтакте"></a-->
-      <a
-        id="footer-social-twitter"
-        href="https://twitter.com/ProfclimatSpb"
-        rel="nofollow"
-        title="«Профклимат СПб» в Twitter"
-      ></a>
+      <a id="footer-social-twitter" href="https://twitter.com/ProfclimatSpb" rel="nofollow" title="«Профклимат СПб» в Twitter"></a>
       <!--TMPL_IF NAME='viber'-->
       <a
         id="footer-viber"
-        href="viber://chat?number=<!--TMPL_VAR NAME='viber'-->"
-        rel="nofollow"
-        title="Viber"
-        ><img src="{% static "/images/viber-b.png" %}" alt="viber"
-      /></a>
+        href="viber://chat?number=+79219041899" rel="nofollow" title="Viber"><img src="{% static "/images/viber-b.png" %}" alt="viber"/></a>
       <!--/TMPL_IF-->
       <!--TMPL_IF NAME='whatsapp'-->
       <a
         id="footer-whatsapp"
-        href="whatsapp://send?phone=<!--TMPL_VAR NAME='whatsapp'-->"
+        href="whatsapp://send?phone=+79219041899"
         rel="nofollow"
         title="Whatsapp"
         ><img src="{% static "/images/whatsapp-b.png" %}" alt="whatsapp"
@@ -81,26 +66,54 @@
     </div>
     <div id="footer-menu">
       <!--TMPL_LOOP NAME="footer-menu"-->
-      <a href="<!--TMPL_VAR NAME='href'-->"><!--TMPL_VAR NAME='text'--></a>
+      <a href="/podbor">Подбор</a>
+      <a href="/pub">Статьи</a>
       <!--/TMPL_LOOP-->
     </div>
     <div id="copy">
-      <a href="https://appfox.ru/" target="_blank"
-        >Продвижение сайтов - Appfox.ru</a
-      >
+      <a href="https://appfox.ru/" target="_blank">Продвижение сайтов - Appfox.ru</a>
+      © s1802.ru, 2013-22г; ver. 2.2.3
       <!--TMPL_VAR NAME="COPY"-->
-      <!--TMPL_INCLUDE NAME="../counters.html"-->
+      <script>
+        var _tmr = _tmr || [];
+        _tmr.push({id: "2701390", type: "pageView", start: (new Date()).getTime()});
+        (function (d, w, id) {
+          if (d.getElementById(id)) return;
+          var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+          ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+          var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+          if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window, "topmailru-code");
+        </script>
+        <noscript><div style="position:absolute;left:-10000px;">
+          <img src="//top-fwz1.mail.ru/counter?id=2701390;js=na" height="1" width="1" alt="Рейтинг@Mail.ru">
+          </div>
+        </noscript>
+        <div id="ext-links">
+          <div id="ext-links-items">
+            <!-- begin of Top100 code -->
+            <script id="top100Counter-1" src="https://counter.rambler.ru/top100.jcn?4438770"></script>
+            <noscript>
+            <a href="http://top100.rambler.ru/navi/4438770/" rel="nofollow">
+            <img src="https://counter.rambler.ru/top100.cnt?4438770" alt="Rambler's Top100" >
+            </a>
+            </noscript>
+            <!-- end of Top100 code -->
+            <!--LiveInternet logo--><a href="//www.liveinternet.ru/click" rel="nofollow" target="_blank"><img src="//counter.yadro.ru/logo?52.10" title="LiveInternet: показано число просмотров и посетителей за 24 часа" alt="LiveInternet" width="88" height="31"></a><!--/LiveInternet-->
+            <a href="https://ru.megaindex.com/tr/info?domain=profclimatspb.ru" target="_blank"><img src="https://ru.megaindex.com/tr/profclimatspb.ru.png" alt="MegaIndex Trust Rank" border="0"></a>
+          </div>
+        </div>
+        <script>(function(d, t, p) {var j = d.createElement(t); j.async = true; j.type = "text/javascript";j.src = ("https:" == p ? "https:" : "http:") + "//stat.sputnik.ru/cnt.js";;var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);})(document, "script", document.location.protocol);</script>
+        <script>var _qevents = _qevents || [];(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);})();_qevents.push({qacct:"p-gyT1XqPqT_H21"});</script>
+        <!--TMPL_INCLUDE NAME="../counters.html"-->
     </div>
     <div class="clr"></div>
   </div>
   <div itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="ООО «Профклимат»" />
+    <meta itemprop="name" content="ООО «ПрофКлимат»" />
     <link itemprop="url" href="https://profclimatspb.ru" />
     <link itemprop="image" href="https://profclimatspb.ru/images/logo.jpg" />
-    <meta
-      itemprop="description"
-      content="Продажа, установка и обслуживание климатических систем в Санкт-Петербурге и Ленинградской области."
-    />
+    <meta itemprop="description" content="Продажа, установка и обслуживание климатических систем в Санкт-Петербурге и Ленинградской области."/>
     <link itemprop="sameAs" href="https://vk.com/club135867292" />
     <link itemprop="sameAs" href="https://twitter.com/ProfclimatSpb" />
     <meta itemprop="telephone" content="+7 812 904-18-98" />
@@ -125,31 +138,9 @@
     <span id="basket-info">Пусто</span>
   </a>
 </div>
-<div
-  id="_running"
-  style="
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-  "
->
+<div id="_running" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
   <div style="position: absolute; top: 50%; left: 50%; z-index: 9990">
     <img src="{% static "/images/running.gif"%}" alt="Подождите, идет загрузка..." />
   </div>
-  <div
-    style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-      background-color: #aaa;
-      opacity: 0.5;
-    "
-  ></div>
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: #aaa; opacity: 0.5;"></div>
 </div>

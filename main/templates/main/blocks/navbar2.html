@@ -1,0 +1,59 @@
+{% load nav_tags %}
+
+<nav id="navbar">
+{% tag_categories_nav as navbar %}
+  {% for nav in navbar %}
+  <div class="navbar-item">
+      <a href="{% if nav.slug == None %}
+      {% url "main:home" %}
+      {% elif nav.slug == 'kondicionery' %}
+      {% url "kondicionery:index" %}
+      {% elif nav.slug == 'obogrevateli' %}
+      {% url "obogrevateli:index" %}
+      {% elif nav.slug == 'ventilyaciya' %}
+      {% url "ventilyacia:index" %}
+      {% else %}
+      {% url "main:nav" nav.slug %}
+      {% endif %}" 
+      {% if nav.slug == navbar_slug %}
+      class="navbar-item-current"
+      {% endif %}>{{nav.name}}
+      </a>
+      {% if nav.code == '1' %}
+      <div class="navbar-sublist-show">
+        <div class="navbar-sublist">
+          {% tag_categories as categories %}
+          {% for el in categories %}
+          <div class="navbar-subitem" itemprop="name">
+            <a href="{% url "kondicionery:subitem" el.slug %}" itemprop="url" title="">{{el.name}}</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% elif nav.code == '2' %}
+      <div class="navbar-sublist-show">
+        <div class="navbar-sublist">
+          {% tag_categories_heat as categories %}
+          {% for el in categories %}
+          <div class="navbar-subitem" itemprop="name">
+            <a href="{% url "obogrevateli:subitem" el.slug %}" itemprop="url" title="">{{el.name}}</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% elif nav.code == '3' %}
+      <div class="navbar-sublist-show">
+        <div class="navbar-sublist">
+          {% tag_categories_vent as categories %}
+          {% for el in categories %}
+            <div class="navbar-subitem" itemprop="name">
+              <a href="/ventilyaciya/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+  </div>
+  {% endfor %}
+  <div class="clr"></div>
+</nav>

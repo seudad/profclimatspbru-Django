@@ -8,7 +8,7 @@ def kondicionery(request):
     item = Products.objects.all()
 
     context = {
-        'title' : 'Кондиционеры',
+        'title' : 'Купить кондиционер в Санкт-Петербурге недорого | ПрофКлимат.',
         'item' : item,
     }
     return render(request, 'kondicionery/kondicionery.html', context)

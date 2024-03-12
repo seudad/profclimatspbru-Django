@@ -1,11 +1,11 @@
 {% load nav_tags %}
 
-<nav id="navbar" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
-  <div class="navbar-item" itemprop="name">
-    <a href="/" itemprop="url" class="navbar-item-current" title="">Главная</a>
+<nav id="navbar">
+  <div class="navbar-item">
+    <a href="/" class="navbar-item-current">Главная</a>
   </div>
   <div class="navbar-item" itemprop="name">
-    <a href="/kondicionery" itemprop="url" title="">Кондиционеры</a>
+    <a href="{% url "kondicionery:kondicionery" %}" class="navbar-item-current">Кондиционеры</a>
     <div class="navbar-sublist-show">
       <div class="navbar-sublist">
         {% tag_categories as categories %}
@@ -18,20 +18,20 @@
     </div>
   </div>
   <div class="navbar-item" itemprop="name">
-    <a href="/obogrevateli" itemprop="url" title="">Обогреватели</a>
+    <a href="{% url "obogrevateli:obogrevateli" %}" itemprop="url" title="">Обогреватели</a>
     <div class="navbar-sublist-show">
       <div class="navbar-sublist">
         {% tag_categories_heat as categories %}
         {% for el in categories %}
         <div class="navbar-subitem" itemprop="name">
-          <a href="/obogrevateli/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>
+          <a href="{% url "obogrevateli:subitem" el.slug %}" itemprop="url" title="">{{el.name}}</a>
         </div>
         {% endfor %}
       </div>
     </div>
   </div>
   <div class="navbar-item" itemprop="name">
-    <a href="/ventilyaciya" itemprop="url" title="">Вентиляция</a>
+    <a href="{% url "ventilyacia:ventilyacia" %}" itemprop="url" title="">Вентиляция</a>
     <div class="navbar-sublist-show">
       <div class="navbar-sublist">
         {% tag_categories_vent as categories %}
@@ -46,7 +46,7 @@
   {% tag_categories_nav as navbar %}
   {% for el in navbar %}
   <div class="navbar-item" itemprop="name">
-    <a href="/{{el.slug}}" itemprop="url" title="">{{el.name}}</a>
+    <a href="{% url "main:nav" el.slug %}" itemprop="url" title="">{{el.name}}</a>
   </div>
   {% endfor %}
   <div class="clr"></div>

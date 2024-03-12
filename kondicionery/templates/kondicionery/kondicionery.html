@@ -1,4 +1,9 @@
 {% extends "main/base.html" %} {% load static %} 
+
+{% block title %}
+<title>{{title}}</title>
+{% endblock title %}
+
 {% block css %} 
 <link rel="stylesheet" href="{% static "css/units.5.css" %}"> 
 <link rel="stylesheet"href="{% static "css/units-tile.5.css" %}"> 

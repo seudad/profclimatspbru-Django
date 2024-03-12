@@ -5,7 +5,7 @@ class Categories(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название') 
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     description = models.TextField(blank=True, null=True,verbose_name='Описание')
-    title = models.CharField(max_length=150, unique=True, verbose_name='Титульник') 
+    title = models.CharField(max_length=150, unique=True, verbose_name='Титульник')
 
     class Meta:
         db_table = 'category'
@@ -51,6 +51,18 @@ class Products(models.Model):
         db_table = 'products'
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+    def __str__(self):
+        return self.name
+    
+class Manuf(models.Model):
+    name = models.CharField(max_length=150, unique=True, verbose_name='Название') 
+    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
+
+    class Meta:
+        db_table = 'manuf'
+        verbose_name = 'Производитель'
+        verbose_name_plural = 'Производители'
 
     def __str__(self):
         return self.name

@@ -1,6 +1,10 @@
 {% extends "main/base.html" %}
 {% load static %}
 
+{% block title %}
+<title>{{title}}</title>
+{% endblock title %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/index.1.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index.2.css' %}" />
@@ -11,7 +15,7 @@
 
 {% block workarea %}
 <div id="main" class="workarea">
-  <h1 itemprop="headline"><!--TMPL_VAR NAME="H1"--></h1>
+  <h1 itemprop="headline">{{title}}</h1>
   <div id="navbar-path" class="hide"><!--TMPL_VAR NAME="PATH"--></div>
   <div id="_main-news">
     <h2 class="mb">
@@ -31,7 +35,7 @@
   <div class="clr"></div>
   <!--TMPL_IF NAME="main-recommended"-->
   <div style="margin-right: 12pt">
-    <div
+    {% comment %} <div
       id="main-recommended"
       class="carousel"
       style="
@@ -127,7 +131,7 @@
         ></span>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
   <!--/TMPL_IF-->
   <div id="_main-manufacturer">
     <h2 class="mb">
@@ -135,24 +139,20 @@
       производителям:
     </h2>
     <div id="main-manufacturer">
-      <a id="main-manufacturer-cu" href="/kondicionery" class="mlinks"
-        >Кондиционеры:</a
-      >
+      <a id="main-manufacturer-cu" href="/kondicionery" class="mlinks">Кондиционеры:</a>
       <!--TMPL_LOOP NAME="main-cmanufacturers"-->
       <!--TMPL_UNLESS name="nll"-->
-      <a href="<!--TMPL_VAR NAME='href'-->" class="mlinks cmans"
-        ><!--TMPL_VAR NAME='text'--></a
-      >
+      {% for el in manuf %}
+      <a href="{{el.slug}}" class="mlinks cmans">{{el.name}}</a>
+      {% endfor %}
       <!--/TMPL_UNLESS-->
       <!--/TMPL_LOOP-->
       <br />
-      <a id="main-manufacturer-hu" href="/obogrevateli" class="mlinks"
-        >Обогреватели:</a
-      >
+      <a id="main-manufacturer-hu" href="/obogrevateli" class="mlinks">Обогреватели:</a>
       <!--TMPL_LOOP NAME="main-hmanufacturers"-->
-      <a href="<!--TMPL_VAR NAME='href'-->" class="mlinks hmans"
-        ><!--TMPL_VAR NAME='text'--></a
-      >
+      {% for el in manuf2 %}
+      <a href="{{el.slug}}" class="mlinks hmans">{{el.name}}</a>
+      {% endfor %}
       <!--/TMPL_LOOP-->
     </div>
   </div>
