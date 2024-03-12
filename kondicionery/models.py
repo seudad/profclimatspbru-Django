@@ -37,6 +37,8 @@ class Products(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     description = models.TextField(blank=True, null=True,verbose_name='Описание')
     img = models.ImageField(upload_to='prod_images', blank=True, null=True, verbose_name='Изображение')
+    imgmore = models.FileField(upload_to='descpript_images', blank=True, null=True, verbose_name='Изображение под описание')
+    spec = models.TextField(blank=True, null=True,verbose_name='Хар-ки')
     price = models.DecimalField(default=0, verbose_name='Цена', decimal_places=0, max_digits=10)
     discount = models.DecimalField(default=0, verbose_name='Скидка в процентах', decimal_places=0, max_digits=3)
     cooled = models.DecimalField(default=0, verbose_name='Охлаждение', decimal_places=1, max_digits=4)

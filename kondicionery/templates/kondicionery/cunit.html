@@ -1,5 +1,8 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% block title %}
+<title>{{prod.name}}</title>
+{% endblock title %}
 {% block css %}
 <link rel="stylesheet" href="{% static "css/unit-info.5.css" %}">
 <style>#unit-info-location a{color:#2E9AFE;}#unit-info-images div.current{border:3pt solid #2E9AFE;}.unit-item-spec-inv{display:inline-block;margin-left:0.3em;width:1em;height:1em;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);position:relative;}.unit-item-spec-inv:before{position:absolute;top:-5pt;left:0px;font-family:'typicons';color:#00aa00;font-size:18pt;content:"\e070";}</style>
@@ -8,6 +11,39 @@
 <div id="unit-info" class="workarea">
     <div id="unit-info-content">
         <h1>{{prod.name}}</h1>
+        <div id="unit-info-blk">
+            <div id="unit-info-image-sect">
+                <img src="{{prod.img.url}}" alt="" id="unit-info-image">
+            </div>
+            <div id="unit-info-buy-sect">
+                <br>
+                <div id="unit-info-price">
+                    {{prod.price}}
+                    <span class="val-currency"></span>
+                </div>
+                <br>
+                <div id="unit-info-buy" class="typcn typcn-shopping-cart">
+                    Купить
+                </div>
+                <div style="position: relative; width:120pt;height:32pt;margin: 4pt 0pt; background-color: rgba(47, 152, 255, 0.0); border:1pt dotted rgba(47, 152, 255, 0.0)">
+                    <div style="position: absolute; top:-8pt;left:0pt;font-size:38pt;color:rgba(47, 152, 255, 1.0);" class="typcn typcn-starburst"></div>
+                    <div style="position: absolute; top:2pt;left:8pt;font-size:22pt;color:rgba(255, 255, 255, 1.0);" class="typcn typcn-gift"></div>
+                    <div style="position: absolute; top:2pt;left:25pt;color:rgba(47, 152, 255, 1.0);font-size:11pt;font-weight: bold;text-align: center;">
+                    Бесплатная доставка!
+                    </div>
+                </div>
+                <div id="unit-info-any-sect"></div>
+            </div>
+        </div>
+        <div id="unit-info-images">
+            <div class="unit-info-images-item current">
+                <img src="{{prod.img.url}}" alt="">
+            </div>
+            <div class="unit-info-images-item">
+                <img src="{{prod.imgmore.url}}" alt="">
+            </div>
+        </div>
+        <div style="clear: both;"></div>
         <div id="unit-info-menu">
             <div class="unit-info-menu-item unit-info-menu-item-cur" id="unit-info-menu-desc">Описание</div>
             <div class="unit-info-menu-item" id="unit-info-menu-spec">Характеристики</div>
@@ -17,6 +53,18 @@
             <div class="unit-info-menu-item" id="unit-info-menu-refs">Ссылки</div>
         </div>
         <div id="unit-info-desc" class="unit-info">{{prod.description | safe }}</div>
+        <div id="unit-info-spec" class="unit-info">
+            <ul class="spec spec_intro spec_m_cols">
+                {{prod.spec | safe}}
+            </ul>
+        </div>
+        <div id="unit-info-refs" class="unit-info">
+            Адрес сайта производителя:
+            <a href="http://www.lessar.com/conditioning/seriya-HB/kommercheskie-ac/sistemy-postojannoy/kanalnye_moshnye/ls-h96dma4-lu-h96dma4/"
+            style="text-decoration: none;">
+            www.lessar.com
+            </a>
+        </div>
     </div>
 </div>
 {% endblock workarea %}
