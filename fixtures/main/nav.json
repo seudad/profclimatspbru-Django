@@ -1,0 +1,102 @@
+[
+  {
+    "model": "main.navbar",
+    "pk": 18,
+    "fields": {
+      "name": "Главная",
+      "slug": null,
+      "code": "",
+      "title": "я"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 19,
+    "fields": {
+      "name": "Кондиционеры",
+      "slug": "kondicionery",
+      "code": "1",
+      "title": "2"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 20,
+    "fields": {
+      "name": "Обогреватели",
+      "slug": "obogrevateli",
+      "code": "2",
+      "title": "3"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 21,
+    "fields": {
+      "name": "Вентиляция",
+      "slug": "ventilyaciya",
+      "code": "3",
+      "title": "4"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 22,
+    "fields": {
+      "name": "Доставка",
+      "slug": "dostavka",
+      "code": "",
+      "title": "5"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 23,
+    "fields": {
+      "name": "Установка",
+      "slug": "ustanovka",
+      "code": "",
+      "title": "6"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 24,
+    "fields": {
+      "name": "Обслуживание",
+      "slug": "obsluzhivanie",
+      "code": "",
+      "title": "7"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 25,
+    "fields": {
+      "name": "Справочная информация",
+      "slug": "info",
+      "code": "",
+      "title": "q"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 26,
+    "fields": {
+      "name": "Контакты",
+      "slug": "kontakty",
+      "code": "",
+      "title": "w"
+    }
+  },
+  {
+    "model": "main.navbar",
+    "pk": 27,
+    "fields": {
+      "name": "Вакансии",
+      "slug": "vakansii",
+      "code": "",
+      "title": "r"
+    }
+  }
+]
